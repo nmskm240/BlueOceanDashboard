@@ -9,10 +9,8 @@
 // ignore_for_file: non_constant_identifier_names, prefer_final_fields
 // ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
-// Dart imports:
 import 'dart:core' as $core;
 
-// Package imports:
 import 'package:protobuf/protobuf.dart' as $pb;
 
 ///  A generic empty message that you can re-use to avoid defining duplicated

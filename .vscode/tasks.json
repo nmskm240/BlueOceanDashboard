@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "gen grpc",
+            "type": "shell",
+            "command": "protoc --dart_out=grpc:lib/application/generated/ -I=/usr/local/include -I=/usr/local/lib/protoc/include -I=BlueOceanField/protos --plugin=protoc-gen-dart=/home/vscode/.pub-cache/bin/protoc-gen-dart $(find BlueOceanField/protos -name \"*.proto\") $(find /usr/local/lib/protoc/include/google/protobuf -name \"*.proto\")",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ]
+}

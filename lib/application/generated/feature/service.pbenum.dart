@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: feature.proto
+//  source: feature/service.proto
 //
 // @dart = 2.12
 

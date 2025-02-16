@@ -1,6 +1,6 @@
 //
 //  Generated code. Do not modify.
-//  source: exchange.proto
+//  source: market.proto
 //
 // @dart = 2.12
 

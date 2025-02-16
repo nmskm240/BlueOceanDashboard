@@ -1,9 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json.
 {
   "name": "Flutter",
-  "image": "ghcr.io/thephaseless/devcontainers/flutter:latest"
+  "image": "ghcr.io/thephaseless/devcontainers/flutter:latest",
   // Features to add to the dev container. More info: https://containers.dev/features.
-  // "features": {},
+  "features": {
+    "ghcr.io/devcontainers-extra/features/protoc": "latest"
+  },
+  "postStartCommand": "flutter pub get"
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
   // Configure tool-specific properties.
