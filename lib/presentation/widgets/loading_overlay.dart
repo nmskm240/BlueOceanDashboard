@@ -10,34 +10,27 @@ import 'package:blue_ocean_dashboard/application/services/loading_overlay_servic
 // Project imports:
 
 final class LoadingOverlay extends ConsumerWidget {
-  final Widget child;
   final Widget? loadingWidget;
 
   const LoadingOverlay({
     super.key,
-    required this.child,
     this.loadingWidget,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final shouldOverlay = ref.watch(loadingOverlayServiceProvider);
-    return Stack(
-      children: [
-        AbsorbPointer(
-          absorbing: shouldOverlay,
-          child: child,
-        ),
-        Visibility(
-          visible: shouldOverlay,
-          child: Container(
-            color: Colors.black.withOpacity(0.5),
-            child: Center(
-              child: loadingWidget ?? CircularProgressIndicator(),
-            ),
+    return Visibility(
+      visible: shouldOverlay,
+      child: IgnorePointer(
+        ignoring: shouldOverlay,
+        child: Container(
+          color: Colors.black.withAlpha(128),
+          child: Center(
+            child: loadingWidget ?? CircularProgressIndicator(),
           ),
         ),
-      ],
+      ),
     );
   }
 }

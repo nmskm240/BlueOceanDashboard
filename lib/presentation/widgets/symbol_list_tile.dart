@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:blue_ocean_dashboard/application/generated/exchange.pb.dart';
+import 'package:blue_ocean_dashboard/application/generated/market.pb.dart';
 
 final class SymbolListTile extends StatelessWidget {
   final Symbol symbol;
@@ -17,7 +17,7 @@ final class SymbolListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(symbol.name),
-      subtitle: Text(symbol.place.name),
+      subtitle: Text(symbol.exchange.name),
       onTap: onTap,
     );
   }

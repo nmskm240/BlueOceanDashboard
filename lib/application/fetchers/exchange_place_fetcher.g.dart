@@ -7,7 +7,7 @@ part of 'exchange_place_fetcher.dart';
 // **************************************************************************
 
 String _$exchangePlaceFetcherHash() =>
-    r'aa16fac899653164b4a50e091a3db5946fc55fa1';
+    r'3a8b528abfa06b590659e282d4f62033cf397287';
 
 /// See also [exchangePlaceFetcher].
 @ProviderFor(exchangePlaceFetcher)

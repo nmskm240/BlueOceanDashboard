@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:blue_ocean_dashboard/application/generated/exchange.pb.dart';
+import 'package:blue_ocean_dashboard/application/generated/market.pb.dart';
 
 final class ExchangeListTile extends StatelessWidget {
   final ExchangePlace place;

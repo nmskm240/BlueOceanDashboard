@@ -7,7 +7,7 @@ part of 'loading_overlay_service.dart';
 // **************************************************************************
 
 String _$loadingOverlayServiceHash() =>
-    r'9cae5301d30a411dbcc05b64f6113dde9ea858d3';
+    r'5aee7e38dd9bb52b64989f8cffec13d115a67e73';
 
 /// See also [LoadingOverlayService].
 @ProviderFor(LoadingOverlayService)

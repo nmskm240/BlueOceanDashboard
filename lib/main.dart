@@ -1,4 +1,5 @@
 // Flutter imports:
+import 'package:blue_ocean_dashboard/presentation/widgets/loading_overlay.dart';
 import 'package:flutter/material.dart';
 
 // Package imports:
@@ -11,10 +12,10 @@ import 'package:blue_ocean_dashboard/presentation/router.dart';
 void main() {
   runApp(
     ProviderScope(
-      child: App(),
       overrides: [
         routingServiceProvider.overrideWith((ref) => RoutingService(routes)),
       ],
+      child: App(),
     ),
   );
 }
@@ -31,6 +32,16 @@ class App extends ConsumerWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+        builder: (context, child) {
+          return Stack(
+            children: [
+              child ?? SizedBox.shrink(),
+              Positioned.fill(
+                child: LoadingOverlay(),
+              ),
+            ],
+          );
+        },
       routerConfig: routing.router,
     );
   }

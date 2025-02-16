@@ -7,11 +7,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-// Project imports:
-import 'package:blue_ocean_dashboard/application/generated/bot.pb.dart';
-import 'package:blue_ocean_dashboard/application/generated/exchange.pb.dart';
-import 'package:blue_ocean_dashboard/application/generated/feature.pb.dart';
-
 part 'routing_service.dto.dart';
 part 'routing_service.g.dart';
 

@@ -5,6 +5,7 @@ part 'loading_overlay_service.g.dart';
 
 @riverpod
 class LoadingOverlayService extends _$LoadingOverlayService {
+  @override
   bool build() {
     return false;
   }

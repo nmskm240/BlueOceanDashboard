@@ -7,7 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 // Project imports:
-import 'package:blue_ocean_dashboard/application/generated/exchange.pb.dart';
+import 'package:blue_ocean_dashboard/application/generated/market.pb.dart';
 import 'package:blue_ocean_dashboard/application/services/routing_service.dart';
 import 'package:blue_ocean_dashboard/presentation/widgets/exchange_list_tile.dart';
 

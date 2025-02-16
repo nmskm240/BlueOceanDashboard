@@ -1,28 +1,27 @@
 // Package imports:
+import 'package:blue_ocean_dashboard/application/generated/feature/service.pbgrpc.dart';
+import 'package:blue_ocean_dashboard/application/generated/market.pbgrpc.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:grpc/grpc.dart';
 import 'package:grpc/grpc_connection_interface.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 // Project imports:
-import 'package:blue_ocean_dashboard/application/generated/bot.pbgrpc.dart';
-import 'package:blue_ocean_dashboard/application/generated/exchange.pbgrpc.dart';
-import 'package:blue_ocean_dashboard/application/generated/feature.pbgrpc.dart';
 
 part 'grpc_client.g.dart';
 
 @Riverpod(keepAlive: true)
-_GrpcClient grpcClient(Ref ref) {
-  final grpc = _GrpcClient();
+GrpcClient grpcClient(Ref ref) {
+  final grpc = GrpcClient();
   ref.onDispose(() => grpc.shutdown());
   return grpc;
 }
 
-final class _GrpcClient {
+final class GrpcClient {
   late final ClientChannel _channel;
   late final ClientConnection _connection;
 
-  _GrpcClient({
+  GrpcClient({
     String host = "localhost",
     int port = 5052,
   }) {
@@ -43,15 +42,11 @@ final class _GrpcClient {
 
   T get<T extends Client>({CallOptions? options}) {
     return switch (T) {
-      ExchangeServiceClient => ExchangeServiceClient(
+      const (MarketServiceClient) => MarketServiceClient(
           _channel,
           options: options,
         ) as T,
-      BotServiceClient => BotServiceClient(
-          _channel,
-          options: options,
-        ) as T,
-      FeatureServiceClient => FeatureServiceClient(
+      const (FeatureProcessServiceClient) => FeatureProcessServiceClient(
           _channel,
           options: options,
         ) as T,

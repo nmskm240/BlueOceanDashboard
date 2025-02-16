@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Flutter Web (Launch in Simple Browser)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "flutterMode": "debug",
+            "deviceId": "web-server",
+            "args": [
+                "--web-port=8000",
+            ],
+            // "preLaunchTask": "openInSimpleBrowser"
+        }
+    ],
+}

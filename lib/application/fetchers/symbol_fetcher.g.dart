@@ -6,7 +6,7 @@ part of 'symbol_fetcher.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$symbolFetcherHash() => r'3d4fb7631b07b5131324db85aea9daa3d2c9f68d';
+String _$symbolFetcherHash() => r'a0adfeee3c6436b20c68f0be37f88df4e16b4a8f';
 
 /// See also [symbolFetcher].
 @ProviderFor(symbolFetcher)
